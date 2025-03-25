@@ -1,17 +1,11 @@
 name: GitHub Actions Demo
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
+  hello: 
+    runs-on: self-hosted
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
